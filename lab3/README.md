@@ -1,4 +1,4 @@
-Distributed System Simulation with Lamport Clock
+# Distributed System Simulation with Lamport Clock
 
 Description:
 This application simulates a distributed system using Lamport's logical clock algorithm. It models event handling, including local events, message sending, and message receiving across multiple processes to maintain causal ordering.
