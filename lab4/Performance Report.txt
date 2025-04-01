@@ -1,0 +1,93 @@
+Performance Report: Maekawa vs Ricart-Agrawala Algorithms
+This report compares the performance of Maekawa's Algorithm and Ricart-Agrawala's Algorithm for distributed mutual exclusion based on simulations.
+Metrics Compared
+
+Number of messages exchanged
+Time to enter the critical section
+Scalability
+Fairness
+
+Simulation Results
+Number of Messages Exchanged
+Maekawa's Algorithm
+
+Best case: 3√N - 1 (where N is the number of processes)
+Worst case: 4√N - 1
+
+Ricart-Agrawala's Algorithm
+
+Consistently requires 2(N - 1) messages per critical section entry
+
+Observation: Maekawa's Algorithm generally requires fewer messages, especially as the number of processes increases.
+Time to Enter Critical Section
+Maekawa's Algorithm
+
+Depends on the size and distribution of voting sets
+Can be faster when voting sets are well-distributed
+
+Ricart-Agrawala's Algorithm
+
+Depends on the current state of other processes
+Can be slower due to the need to receive replies from all processes
+
+Observation: Maekawa's Algorithm can potentially enter the critical section faster, especially in larger systems.
+Scalability
+Maekawa's Algorithm
+
+Scales better due to reduced message complexity
+Performance depends on optimal voting set configuration
+
+Ricart-Agrawala's Algorithm
+
+Less scalable due to linear increase in messages with system size
+Simpler implementation may be beneficial for smaller systems
+
+Observation: Maekawa's Algorithm shows better scalability for larger distributed systems.
+Fairness
+Maekawa's Algorithm
+
+Can lead to unfairness if voting sets are not properly designed
+Potential for deadlock if not implemented carefully
+
+Ricart-Agrawala's Algorithm
+
+Generally fair due to the use of logical clocks
+Less prone to deadlock
+
+Observation: Ricart-Agrawala's Algorithm tends to be fairer in granting access to the critical section.
+Strengths and Weaknesses
+Maekawa's Algorithm
+Strengths:
+
+Reduced message complexity
+Potential for faster critical section entry
+Better scalability for large systems
+
+Weaknesses:
+
+Complexity in designing optimal voting sets
+Potential for unfairness and deadlock
+More complex implementation
+
+Ricart-Agrawala's Algorithm
+Strengths:
+
+Simpler implementation
+Inherently fair due to logical clock usage
+Less prone to deadlock
+
+Weaknesses:
+
+Higher message complexity
+Less scalable for large systems
+Potentially slower critical section entry in some cases
+
+Conclusion
+Based on the simulation results:
+
+For smaller systems (N < 10), Ricart-Agrawala's Algorithm may be preferred due to its simplicity and inherent fairness.
+For larger systems (N > 10), Maekawa's Algorithm becomes more efficient due to its reduced message complexity and better scalability.
+If fairness is a critical concern, Ricart-Agrawala's Algorithm might be the better choice, unless careful design of voting sets in Maekawa's Algorithm can ensure fairness.
+In systems where network latency is a significant factor, Maekawa's Algorithm may provide better performance due to its potential for faster critical section entry.
+
+The choice between these algorithms ultimately depends on the specific requirements of the distributed system, including size, fairness requirements, and network characteristics.
