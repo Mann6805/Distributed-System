@@ -1,4 +1,4 @@
-Distributed Mutual Exclusion Algorithms: Ricart-Agrawala and Maekawa
+# Distributed Mutual Exclusion Algorithms: Ricart-Agrawala and Maekawa
 This project implements and compares two distributed mutual exclusion algorithms: Maekawa's Algorithm and Ricart-Agrawala's Algorithm. These algorithms are used to manage access to a critical section in a distributed system.
 
 How to Run the Simulation:
