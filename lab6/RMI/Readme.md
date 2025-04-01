@@ -1,4 +1,4 @@
-RMI
+# RMI
 
 Aim:
 To implement a basic banking system using Java RMI (Remote Method Invocation) that supports account creation, balance inquiry, deposits, and withdrawals in a client-server architecture.
